@@ -1,0 +1,9 @@
+This is the most widely known among begining students of programming, cut the shit, its the most basic way
+of thinking about a sorting algorithm, 
+but like all our first ideas its the most inefficient.
+
+The basic idea underlying the bubble sort is to pass through the file sequentially several times. Each pass consists of comparing
+each element in the file with its successor(x[i] and x[i+1]) and interchanging the two elements if they are not in proper order.
+Consider the following file
+
+

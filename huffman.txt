@@ -1,0 +1,83 @@
+
+HUFFMAN ALGORITHM:
+
+
+Formal Definition:
+
+Suppose that we have an alphabet of n symbols and a long message consisting of these symbols from this alphabet.
+
+We wisht to encode the message as a long bit string by assigning a bit string code to each symbol of the alphabet and concatenating the individual
+codes of the symbols making up the message to produce an encoding for the message.
+
+                    SYMBOL | CODE 
+                    A         010
+		    B 	      100
+		    C 	      000
+		    D         111
+
+
+
+Message  ABACCDA would be encoded as:
+	0101000100000000111010
+
+
+But this would be an inefficient encdoing technique since three bits are used for each symbol, so that 21 bits are needded to encode the entire
+message.
+
+If we asssign two bits, the result would be 14 bits
+
+And we wish to find the code that minimizes the length of the encoded message.
+
+In pursuit of efficiency, we obeserve the solution again, we can see another scope of efficiency, reexamining the 
+message again, we can see that some symbols appear more frequently than other, in this case A is appearing
+more frequently. If a code is chosen such that the symbol A is assigned a shorter bit string than the letters B and D, then the length
+of the encoded message would be small. Obviously, because short code A would appear more frequently than the long code.
+
+
+The new code and symbol table can be constructed as:
+
+
+			SYMBOL  |   CODE
+			A 	    0
+			B           110
+			C           10
+			D           111
+
+
+
+	New encoding of the message  ABACCDA would be : 0110010101110
+
+	See, the magic now it requires only 13 bits.
+	Well ofcourse 13 does not look like that much of a bigger saving, but if the message is longer,
+	the saving can be substantial.
+
+
+
+Generally while decoding we proceed by scanning a bit string from left to right.
+If a 0 is encountered:
+	the symbol is A 
+
+else:
+	the symbol is A or B or C or D 
+	next bit is examined
+	if the the second bit is 0, the symbol is C, otherwise it must be B or a D 
+	and the third bit must be examined
+	if third bit is 0 it must be  D.
+
+As soon as the process identifies first symbol, the process is repeated starting at next bit to find the next symbol
+
+
+This suggests a method for developing an optimal encoding scheme, given the frequency of occurence of each symbol in a message.
+
+
+Find the two symbols that appear less frequently.
+	lets say B and D.
+	the last bits of B and D differentiate one from another
+	Combine these two to form a single symbol BD, whose code returns the knowledge that a symbol is either a B or a D 
+	The frequency of this new symbol is the sum of the frequencies of its two constituent symbol.
+	Thus BD has frequency = 2
+
+	After encoding  
+
+
+
