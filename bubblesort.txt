@@ -6,4 +6,3 @@ The basic idea underlying the bubble sort is to pass through the file sequential
 each element in the file with its successor(x[i] and x[i+1]) and interchanging the two elements if they are not in proper order.
 Consider the following file
 
-
