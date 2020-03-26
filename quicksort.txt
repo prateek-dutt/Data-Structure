@@ -1,0 +1,19 @@
+This is also called partition exchange.
+
+
+Let X be an array and n the number of the elements in the array to be sorted, Chose an element a  from a specific postion within the array 
+
+
+For example let a be chosen as the first element, so that a= x[0]
+
+Suppose that the elements of x are patitioned so that a is placed into position j and the following conditions hold:----
+
+
+    1. Each of the elements in positions 0 through j-1 is less than or equal to a.
+
+    2. Each of the elements in positions j+=1 through n-1 is greater  than or equal to a.
+
+    Notice that if these two conditions hold for a particular a and j, a is the jth small element if x , so that a 
+    remians in position j when the array is completely sorted.
+
+    If the foregoing process is repeated with subarrays x[0] through  x[j-1] and x[j+1] through x[n-1]
