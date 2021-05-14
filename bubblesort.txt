@@ -1,4 +1,4 @@
-This is the most widely known among begining students of programming, cut the shit, its the most basic way
+This is the most widely known among beginer students of programming, cut the shit, its the most basic way
 of thinking about a sorting algorithm, 
 but like all our first ideas its the most inefficient.
 
